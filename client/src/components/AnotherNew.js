@@ -3,7 +3,7 @@ import React from "react";
 const AnotherNew = () => {
   return (
     <div>
-      <h1>hi new component</h1>
+      <h1>hi new component another change</h1>
     </div>
   );
 };
