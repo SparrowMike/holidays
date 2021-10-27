@@ -1,4 +1,4 @@
-# Justin was here!
+# Justin
 
 # Getting Started with Create React App
 
