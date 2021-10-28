@@ -17,8 +17,8 @@ mongoose.connection.once("open", () => {
 
 //* Middleware
 app.use(express.static(path.join(__dirname, "./client/build")));
-app.use("/holidays", holidaysController);
-app.use("/countries", countriesController);
+app.use("/api/holidays", holidaysController);
+app.use("/api/countries", countriesController);
 
 //* Routes
 app.get("/", (req, res) => {

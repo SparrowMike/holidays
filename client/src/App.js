@@ -1,11 +1,10 @@
-import { useState } from "react";
+import HolidayTable from "./components/HolidayTable";
 
 const App = () => {
-  const [holidays, setHoliday] = useState([]);
-
   return (
     <div className="container">
       <h1>Holidays! Celebrate!</h1>
+      <HolidayTable />
     </div>
   );
 };
