@@ -21,4 +21,33 @@ router.get("/", async (req, res) => {
   res.json(holidays);
 });
 
+router.post("/", async (req, res) => {
+  console.log("body", req.body);
+  const holiday = await Holiday.create({ name: req.body.title });
+
+  res.json(holiday);
+});
+
+router.get("/:id", async (req, res) => {
+  const { id } = req.params;
+  const holiday = await Holiday.findById(id);
+  res.json(holiday);
+});
+
+router.put("/:id", async (req, res) => {
+  const { id } = req.params;
+  const holiday = await Holiday.findByIdAndUpdate(id, req.body);
+  res.json(holiday);
+});
+
+router.delete("/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const result = await Holiday.findByIdAndDelete(id);
+    res.json(result);
+  } catch (error) {
+    res.json({ error });
+  }
+});
+
 module.exports = router;
