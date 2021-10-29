@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
@@ -62,7 +63,9 @@ function HolidayDetailsForm() {
       <p>
         description: <textarea value={holiday.description} />
       </p>
-      <button>Update</button>
+      <Link to="/holidays">
+        <button>Update</button>
+      </Link>
     </form>
   );
 }
